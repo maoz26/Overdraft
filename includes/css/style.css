@@ -1,0 +1,745 @@
+* { margin:0; padding:0; }
+
+article, section, main, nav, aside, footer, header, video {
+	display: block;
+}
+
+/*********************** Installing fonts **************************/
+
+@font-face {
+    font-family: "barlev-light";
+    src: url(../../fonts/barlev-aaa-light.otf); format("truetype");
+}
+
+@font-face {
+    font-family: "barlev-regular";
+    src: url(../../fonts/barlev-aaa-regular.otf); format("truetype");
+}
+
+@font-face {
+    font-family: "barlev-bold";
+    src: url(../../fonts/barlev-aaa-bold.otf); format("truetype");
+}
+
+@font-face {
+    font-family: "almoni-black";
+    src: url(../../fonts/almoni-dl-aaa-black.otf); format("truetype");
+}
+
+@font-face {
+    font-family: "almoni-bold";
+    src: url(../../fonts/almoni-dl-aaa-bold.otf); format("truetype");
+}
+
+@font-face {
+    font-family: "almoni-light";
+    src: url(../../fonts/almoni-dl-aaa-light.otf); format("truetype");
+}
+
+@font-face {
+    font-family: "almoni-regular";
+    src: url(../../fonts/almoni-dl-aaa-regular.otf); format("truetype");
+}
+
+@font-face {
+    font-family: "narkis-regular";
+    src: url(../../fonts/NarkisBlockCondensedThin-Regular.otf); format("truetype");
+}
+
+@font-face {
+    font-family: "narkis-medium";
+    src: url(../../fonts/NarkisBlockCondensed-Medium.otf); format("truetype");
+}
+
+@font-face {
+    font-family: "narkis-bold";
+    src: url(../../fonts/NarkisBlockCondensed-Bold.otf); format("truetype");
+}
+
+/**************************** General ******************************/
+
+body {
+  background-color: #101223;
+  text-align: center;
+  z-index: -5; 
+}
+
+#wrapper {
+  margin: auto;
+  /*background: url(../../images/holeGif.gif) no-repeat;*/
+  /*background-size: cover;*/
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -4; /* before the background */
+}
+
+video {
+  margin: auto;
+}
+
+h1, h2, h3, p {       
+  color: #ebdaa7; 
+  font-family: "almoni-light";
+}
+
+h2 {                
+  font-size: 27px;
+}
+
+h3 {                  
+  font-size: 24px;
+}
+
+p {                  
+  font-size: 18px; 
+  text-align: right;
+  line-height: 24px; 
+}
+
+.text_box {
+  margin: auto;
+  width: 700px;
+}
+
+.frame {
+  width: 90%;
+  position: relative;
+  margin: auto;
+  margin-bottom: 350px;
+}
+
+.read_more_arrow {
+  background-image: url(../../images/arrow_down.png);  
+  background-size: cover;
+  position: relative;
+  width: 45px;
+  height: 25px;
+  margin: auto;
+}
+
+.read_more_arrow:hover {
+  background-image: url(../../images/arrow_down_white.png);  
+  background-size: cover;
+  position: relative;
+  width: 45px;
+  height: 25px;
+  margin: auto;
+}
+
+.read_more_text {
+  color: #ff5539; 
+  margin-top: 15px;
+  font-size: 16px;
+  font-family: "almoni-regular"; 
+}
+
+.h_red {    
+  color: #111223; 
+  background-color: #ff5539;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 0px 10px 0px 10px;
+}
+
+.h_red_small {
+  font-family: "almoni-regular"; 
+}
+
+article {
+  display: none;
+}
+
+/**************************** Frame 1 - Counter ******************************/
+
+#frame1_counter h1 {                  
+  padding-top: 210px;
+  font-family: "narkis-regular";
+  font-size: 42px;
+}
+
+#counter {                            
+  font-family: "barlev-bold"; 
+  font-size: 102px;                   
+  text-align: center;
+  display: inline;
+  color: #ffffff; 
+  margin-right: 40px;
+}
+
+#frame1_counter p {                  
+  font-family: "narkis-medium"; 
+  font-size: 20px; 
+  display: inline;
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+#frame1_counter h3 {                 
+  color: #ffffff; 
+  margin-top: 24px;
+}
+
+#scroll_down {     
+  background-image: url(../../images/scroll_icon.png);  
+  background-size: cover;
+  position: relative;
+  width: 30px;
+  height: 25px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/********************** Page 2 - debts graph ************************/
+
+#frame2_debt_graph h3 {                
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 25px;
+}
+
+#debtsGraph {
+  width: 550px;
+  height: 450px;
+  margin: 0 auto;
+  margin-top: -20px;
+  position: relative;
+  right: 40px;
+}
+
+#frame2_debt_graph .read_more_arrow {    
+  top: 10px;
+}
+
+#graph_click {
+  font-family: "almoni-regular"; 
+  font-size: 16px; 
+  text-align: center;
+  color: #486b71;
+  display: inline-block;
+}
+
+.f_red {
+  color: #ff5539;
+  font-size: 32px; 
+  position: relative;
+  top: 13px;
+}
+
+#read_more_h3 {
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+#read_more_h1 {
+  font-family: "barlev-bold"; 
+  font-size: 48px;
+}
+
+/********************** Page 2 - read more : salary  ************************/
+
+#frame2_read_more p {
+  margin-top: 30px; 
+}
+
+/********************** Page 3 - growth ************************/
+
+#frame3_growth h3 {
+  line-height: 32px; 
+  width: 700px;
+  margin: auto;
+  font-size: 22px;
+}
+
+#growth_movie {   
+  padding-top: 30px;
+  height: 399px;       
+  width:828px;
+  overflow: hidden;
+  margin: auto;
+  direction: ltr;
+}
+
+/********************** Page 4 - balance ************************/
+
+#frame4_balance .read_more_arrow {
+  margin-top: 10px;
+}
+
+#frame4_balance h2{
+  padding-top: 20px;
+}
+
+#break { 
+  font-family: "barlev-bold"; 
+  font-size: 140px;
+  margin-top: 26px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/********************** Page 4 - read more : balance  ************************/
+
+#frame4_read_more {
+  margin-top: 20px;
+}
+
+/********************** Page 5 - recession ************************/
+
+#recession_movie {
+  width: 829px;
+  height: 399px;
+  margin: auto;
+  margin-top: 30px;
+  overflow: hidden;
+  direction: ltr;
+}
+
+#red_upper {
+  margin-top: 20px;
+}
+
+/********************** Page 5 - read more : recession  ************************/
+
+#frame5_read_more {
+  margin-top: 20px;
+}
+
+#frame5_recession .read_more_arrow {
+  margin-top: 10px;
+}
+
+
+/********************** Page 6 - supervise ************************/
+
+#frame6_supervise h3 {
+  line-height: 32px; 
+  width: 700px;
+  margin: auto;
+  font-size: 22px;
+}
+
+#supervise_movie {
+  width: 829px;
+  height: 399px;
+  padding-top: 20px;
+  overflow: hidden;
+  direction: ltr;
+  margin: auto;
+}
+
+/********************** Page 7 - bank israel ************************/
+
+#frame7_bank_israel h3{
+  padding-top: 20px;
+}
+
+#frame7_bank_israel h1 {
+  margin-top: 15px;
+  font-family: "barlev-bold"; 
+  font-size: 82px;
+}
+
+#frame7_bank_israel .read_more_arrow {
+  top: 10px;
+}
+
+/********************** Page 7 - read more : bank israel  ************************/
+
+#frame7_read_more {
+  margin-top: 30px;
+}
+
+/********************** Page 8 - world ************************/
+
+#frame8_world p {
+  margin-top: 40px;
+}
+
+#frame8_world h2 {
+  margin-top: 180px;
+}
+
+#frame8_world h3 {
+  padding-top: 20px;
+}
+
+#frame8_world .h_red_small {
+  padding: 0px 4px 0px 4px;
+  margin-top: -5px;
+  line-height: 17px;
+}
+
+/********************** Page 9 - map  ************************/
+
+#frame9_map p {
+  font-family: "almoni-regular"; 
+  padding-top: 20px;
+  margin: auto;
+  text-align: center;
+  width: 700px;
+  letter-spacing: 1px;
+}
+
+#frame9_map h3{
+  padding-top: 20px;
+  width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+#map_click {
+  font-family: "almoni-regular"; 
+  font-size: 16px; 
+  text-align: center;
+  color: #668e91;
+  display: inline-block;
+}
+
+#frame9_map button {
+  display: none;
+}
+
+#frame9_map section {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#mapSide {
+  position: relative;
+}
+
+#map_graph {
+  position: relative;
+}
+
+#maps {
+  margin: auto;
+}
+
+#frame9_map .axis {
+  font-family: "barlev-regular";
+  font-size: 18px;
+  fill: #a1a18f;
+}
+
+#frame9_map .y.axis {
+  fill: #ebdaa7; 
+}
+
+#frame9_map .axis path, #frame9_map  .axis line {
+  display: none;
+}
+
+#frame9_map .axis path {
+  /*display: none;*/
+}
+
+#frame9_text {
+  margin: auto;
+}
+
+/********************** Page 10 - loans ************************/
+
+#frame10_loans h3 {
+  line-height: 32px; 
+  width: 700px;
+  margin: auto;
+  font-size: 22px;
+}
+
+#loans_movie {
+  width: 829px;
+  height: 399px;
+  padding-top: 20px;
+  overflow: hidden;
+  direction: ltr;
+  margin: auto;
+}
+
+/********************** Page 11 - donut chart ************************/
+
+#frame11_donut_chart h3 {
+  margin-top: 30px;
+}
+
+#frame11_donut_chart p {
+  margin-top: 20px;
+  margin: auto;
+  text-align: center;
+  letter-spacing: 1px;
+  width: 700px;
+}
+
+#donut {
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+/********************** Page 12 - lately ************************/
+
+#frame12_lately h1 {
+  font-family: "almoni-bold"; 
+  margin-top: 120px;
+  font-size: 32px;
+  display: inline-block;
+  width: 700px;
+}
+
+#frame12_lately h3 {
+  padding-top: 20px;
+  width: 700px;
+  margin: auto;
+  line-height: 32px; 
+}
+
+/********************** Page 13 - counter again ************************/
+
+#frame13_counter_again h1 {
+  font-family: "narkis-regular";
+  font-size: 42px;
+  display: inline-block;
+}
+
+#counter_again {                            
+  font-family: "barlev-bold"; 
+  font-size: 102px;                   
+  text-align: center;
+  display: inline-block;
+  color: #ffffff; 
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+#frame13_counter_again p {                  
+  font-family: "narkis-medium"; 
+  font-size: 20px; 
+  display: inline;
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+#frame13_counter_again h2 {  
+  margin-top: 40px;
+  font-size: 28px; 
+}
+
+#frame13_counter_again {
+  margin-bottom: 0px;  /* override the frame class css */
+}
+
+#facebook {
+  background-image: url(../../images/facebook.png);  
+  background-size: cover;
+  position: relative;
+  width: 29px;
+  height: 29px;
+  margin: auto;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+#twitter {
+  background-image: url(../../images/twitter.png);  
+  background-size: cover;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  display: inline-block;
+}
+
+#counter_sub {
+  font-family: "barlev-regular"; 
+  font-size: 51px;   
+  position: relative;
+  margin: auto;
+  font-size: 51px;
+}
+
+/********************** Page 13+ - credits ************************/
+
+#credit {
+  padding-top: 40px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+#credit p {
+  margin-top: 15px;
+  color: #476b6f; 
+  font-family: "almoni-bold";
+  font-size: 13px;
+  top: 10px;
+  text-align: center;
+}
+
+#calcalist {
+  background-image: url(../../images/calcalist.png);  
+  background-size: cover;
+  position: relative;
+  width: 76px;
+  height: 17px;
+  margin: auto;
+  display: block;
+}
+
+#shenkar {
+  background-image: url(../../images/shenkar.png);  
+  background-size: cover;
+  position: relative;
+  width: 50px;
+  height: 45px;
+  margin: auto;
+  display: block;
+  margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************** MOBILE ************************/
+
+@media (max-width: 600px) {  /* was 480 */
+
+/********************** General ************************/
+  #wrapper{
+/*    background-color: black;    delete later */
+  }
+
+  .frame {
+    margin-bottom: 200px;
+    width:70%;
+  }
+
+  .text_box {
+    width: 300px;
+    position:relative;
+    left:20px;
+  }
+
+  /********************** Frame 1 ************************/
+  #frame1_counter {
+    
+  }
+
+  #frame1_counter h1 {                  
+    padding-top: 100px;
+  }
+
+  #counter{
+    font-size: 45px;
+    margin-right: 10px;
+  }
+
+  /********************** Frame 2 ************************/
+  #frame2_debt_graph{
+    
+  }
+
+  #debtsGraph {
+    width: 250px;
+    height: 350px;
+    right: 20px;
+  }
+    
+  /********************** Frame 3 ************************/
+  #frame3_growth{
+    display: none;
+  }
+
+  /********************** Frame 4 ************************/
+  #frame4_balance{
+
+  }
+
+  /********************** Frame 5 ************************/
+  #frame5_recession{
+    display: none;
+  }
+    
+  /********************** Frame 6 ************************/
+  #frame6_supervise{
+    display: none;
+  }
+
+  /********************** Frame 7 ************************/
+  #frame7_bank_israel{
+    
+  }
+
+  #frame7_bank_israel h1 {
+    font-size: 32px;
+  }
+
+  /********************** Frame 8 ************************/
+  #frame8_world{
+    
+  }
+
+  #frame8_world h2 {
+    margin-top: 50px;
+  }
+
+  /********************** Frame 9 ************************/
+  #frame9_map{
+    display: none;
+  }
+
+  /********************** Frame 10 ************************/
+  #frame10_loans{
+    display: none;
+  }
+
+  /********************** Frame 11 ************************/
+  #frame11_donut_chart{
+    display: none;
+  }
+
+  /********************** Frame 12 ************************/
+  #frame12_lately{
+    position: relative;
+    left: 20px;
+  }
+
+  #frame12_lately h1 { 
+    width: 300px;
+  }
+
+  #frame12_lately h3 {
+    width: 300px;
+  }
+
+  /********************** Frame 13 ************************/
+  #frame13_counter_again{
+    position: relative;
+    left: 20px;
+  }
+
+  #frame13_counter_again h1 {
+    font-size: 32px;
+  }
+
+  #counter_again {                            
+    font-size: 40px;
+    margin-right: 10px;  
+  }
+
+}
+
+
+
+
+

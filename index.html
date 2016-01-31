@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="he" dir="RTL">   
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content='initial-scale=1,maximum-scale=1,user-scalable=no'> 
+        <title>Overdraft</title>
+        <!-- General JS -->
+        <script src="includes/plugin_javascript/jquery-1.11.3.min.js"></script>
+        <script src="includes/plugin_javascript/jquery-1.11.3.min.js"></script>
+        <script src="includes/plugin_javascript/d3.min.js"></script>
+        <!-- JS Plugins -->
+        <script type="text/javascript" src="includes/plugin_javascript/highcharts.src.min.js"></script>
+        <script type="text/javascript" src="includes/plugin_javascript/noframework.waypoints.min.js"></script>
+		<script type="text/javascript" src="includes/plugin_javascript/lettering.min.js"></script>
+		<script type="text/javascript" src="includes/plugin_javascript/textillate.min.js"></script>
+    	<!-- Our JS files -->
+        <script type="text/javascript" src="includes/project_javascript/javascriptCounter.js"></script>
+        <script type="text/javascript" src="includes/project_javascript/javascriptDebtsGraph.js"></script>
+        <script type="text/javascript" src="includes/project_javascript/javascriptDonut.js"></script>
+        <script type="text/javascript" src="includes/project_javascript/javascriptTiming.js"></script>
+        <script type="text/javascript" src="includes/project_javascript/loadData.js"></script>
+        <!-- CSS files -->
+        <link rel="stylesheet" href="includes/css/animate.css">
+        <link rel="stylesheet" href="includes/css/style.css">
+    </head>
+
+    <body> 	
+        <div id="wrapper">
+            
+            <section class="frame" id="frame1_counter">
+            	<h1>זהו הר החובות של הישראלים</h1>
+            	<section id="counter"></section>
+            	<p>שקל</p>
+            	<h3>למה המספר הזה אמור להדאיג אותנו?</h3>  
+            	<section id="scroll_down"></section>  
+            </section>
+
+
+             <section class="frame" id="frame2_debt_graph">  
+                <h3>היקף החובות של הישראלים <span class="h_red h_red_small">גדל ב - 75%</span>
+            		מאז המשבר של 2008, <br> אבל השכר לא עומד בקצב
+            	</h3><br><br>
+            	<p id="graph_click"><span class="f_red">* </span>בלחיצה על מדד להלוואה במקרא תוכלו להסיר או להשיב אותו לגרף</p><br><br><br>
+             	<section id="debtsGraph"></section> 
+            	<h3 id="read_more_h3">השכר, לעומת זאת </h3><br>
+	            <h1 id="read_more_h1" class="h_red">גדל רק ב - 37% מאז 2008</h1>
+	            <h4 class="read_more_text">קרא עוד</h4>
+            	<section class="read_more_arrow"></section>
+	            <article id="frame2_read_more">
+	            	<section class="text_box">
+		            	<p>בעשור האחרון החובות של משקי הבית התנפחו ב-122%. <br>
+						ומה קרה באותה תקופה לשכר הריאלי (כלומר לשכר בניכוי יוקר המחיה)? <br>
+						עלה ב-37% בלבד. במילים אחרות, אנחנו לוקחים יותר ויותר הלוואות, נכנסים למינוס 
+						עמוק יותר ויותר, אבל השכר שלנו פשוט לא עומד בקצב. <br><br>
+						נקודת הזינוק המשמעותית של החובות היתה משנת 2008, כאשר פרץ המשבר הכלכלי. <br>
+						מאז טיפסו החובות ב-75%, ואילו השכר ב-24% בלבד. יש לכך כמה סיבות. <br>
+						ראשית, חלק גדול מהחובות הם חובות למשכנתאות והלוואות מסוגים נוספים לרכישת 
+						דירה. עליות המחירים החדות של הדירות למגורים מאז 2008 ניפחו גם את בועת החובות 
+						האלה. מחירים גבוהים יותר שווים הלוואות גדולות יותר. <br><br>
+						חוץ מעניין מחירי הדיור, הישראלים התחילו לאמץ בהדרגה דפוסי צריכה אמריקאים 
+						ולחיות באופן שוטף על בסיס אשראי. לכן, לא רק החלק של ההלוואות לרכישת דירות 
+						זינק בשנים האחרונות, אלא גם החלק של ההלוואות האחרות. החלק שכולל את המינוס 
+						בבנק ואת ההלוואות לכל מטרה שאפשר לקחת בקליק-קלאק, הלוואות לבתמצווש, 
+						לשיפוץ המטבח או לטיול בחו״ל. ההלוואות האלה שהבנקים מחלקים גדלו מאז 2008 
+						ב-37%. אבל הבנקים הם רק חלק מהתמונה, כי הישראלים לוקחים הלוואות מכל מי 
+						שמחלק אותן. למשל, מחברות כרטיסי האשראי, שההלוואות שהן מחלקות גדלו 
+						מאז 2008 בשיעור מדהים של 160%. הישראלים לוקחים הלוואות אפילו מגופי הפנסיה 
+						שלהם. ההלוואות האלה גדלו בתקופה הזו יותר מפי שניים. <br><br>
+						וזו אפילו לא כל התמונה, כי הנתונים של בנק ישראל אינם מלאים ואינם כוללים הלוואות 
+						של חברות כמו מימון ישיר (שמחלקת יותר ממיליארד שקל בשנה), ובטח לא את החברות 
+						והגופים שפועלים בשוק האפור.
+		            	</p>
+	            	</section>
+	            </article> 
+            </section> 
+
+
+			<section class="frame" id="frame3_growth">
+				<section>
+					<h3>מדוע הצמיחה בעצם מתבססת על חובות?<br>
+					משום שיזמים לוקחים הלוואות כדי לפתוח עסק חדש, לקנות מכונות למפעל
+					או לרכוש חברה ממישהו אחר ולפתוח אותה.
+					כל הפעילות הזו לא היתה מתאפשרת בלי הלוואות ובלי חוב<br>
+					</h3>
+				</section> 
+				<section id="growth_movie">  
+					<video id="video3">
+						<source src="movies/3-Growth_Movie.mp4" type="video/mp4" /> 
+ 						<object data="flash_player.swf" type="application/x-shockwave-flash">
+							<param name="movie" value="flash_player.swf">
+						</object> 
+					</video>
+				</section>
+			</section> 
+
+
+			<section class="frame" id="frame4_balance">
+				<h2>אבל מה קורה כשהאיזון</h2>
+				<h1 class="h_red" id="break">נשבר?</h1><br>
+				<h4 class="read_more_text">קרא עוד</h4>
+				<section class="read_more_arrow"></section>
+	            <article id="frame4_read_more">
+	            	<section class="text_box">
+		            	<p>הבעיה מתחילה אם משהו בשוק ההלוואות יוצא מאיזון. למשל, אם אנשים לוקחים יותר 
+						מדי חובות, הרבה מעבר ליכולת ההחזר שלהם, פשוט בשביל לשרוד את היומיום. אם או 
+						אנשים לוקחיםהלוואה שהם לא מבינים איך בדיוק ההחזר החודשי שלה צפוי לגדול, 
+						ומוצאים את עצמם טובעים.או אם אנשים לוקחים הלוואה ועוד הלוואה ועוד הלוואה רק 
+						בשביל להמשיך ולהתגלגל מאחת לשנייה.אם מדובר באדם אחד או שניים או מאה, זה 
+						אמנם יכול להיות מסוכן מאוד עבורם, אבל לא עבור החברה כולה.אם החיים תחת 
+						הלוואות וחובות הופכים לנורמה חברתית כוללת, זה כבר מצב אחר, שעלול לסכן את 
+						המשק כולו. איך? הנה כך:<br><br>
+						כל עוד אין מיתון והאבטלה נמוכה, אנשים עובדים ומצליחים להחזיר את החובות שלהם. 
+						זה קשה, אבל הם שורדים, איכשהו. אבל, אם יפרוץ מיתון כלכלי ממושך ואנשים רבים 
+						יאבדו את מקום העבודה שלהם, הם יתקשו להחזיר את החובות שלהם. בהתחלה הם 
+						עוד יעמדו בתשלומים החודשיים, אבל ככל שהאבטלה תימשך זה יהיה יותר ויותר מסובך.
+						</p>
+					</section>
+				</article>
+			</section>
+
+
+			<section class="frame" id="frame5_recession">
+				<section>
+					<h3>ברגע שהמשק נקלע למיתון ושיעור האבטלה עולה, לציבור קשה להחזיר את החובות<br>
+						<span class="h_red h_red_small" id="red_upper">אז מקטינים את הצריכה, מפסיקים
+						 לתרום לכלכלה ומתחילים לחיות על הקצה</span>
+					</h3>
+				</section>	
+				<h4 class="read_more_text">קרא עוד</h4>
+				<section class="read_more_arrow"></section>
+				<article id="frame5_read_more">
+	            	<section class="text_box">
+		            	<p>זו הנקודה שבה קיים סיכון למשק כולו. ראשית, אנשים שלא עובדים וצריכים להחזיר 
+						חובות יעשו הכל בשביל להחזיר אותם, מה שאומר שהם יקטינו את הצריכה השוטפת 
+						שלהם. זה יפגע גם באיכות החיים שלהם וגם בהכנסות המדינה ממסים, כי פחות צריכה 
+						משמעותה פחות מע״מ. וכשלמדינה יהיו פחות הכנסות היא תיאלץ לקצץ בתקציבים, 
+						כלומר בשירותים לציבור, או להעלות מסים אחרים, או להגדיל את הגירעון. כל אחת 
+						מהאפשרויות הזו אינה טובה.
+						</p>
+					</section>
+				</article>
+				<section id="recession_movie">  
+					<video id="video5"> 
+						<source src="movies/5-Recession_Movie.mp4" type="video/mp4" /> -->
+ 						<object data="flash_player.swf" type="application/x-shockwave-flash">
+							<param name="movie" value="flash_player.swf">
+						</object> 
+					</video>
+				</section>
+			</section>
+
+
+			<section class="frame" id="frame6_supervise">
+				<section>
+					<h3>בנק ישראל שמפקח על הבנקים דואג ליציבות שלהם, אבל לא 
+					למשקי הבית אבל לא באמת יודעים כמה אנחנו משלמים על 
+					ההלוואות האלה, או על המינוס בבנק
+					</h3>
+				</section>	
+				<section id="supervise_movie">  
+					<video id="video6" loop> 
+						<source src="movies/6-Supervise_Movie.mp4" type="video/mp4" /> -->
+ 						<object data="flash_player.swf" type="application/x-shockwave-flash">
+							<param name="movie" value="flash_player.swf">
+						</object> 
+					</video>
+				</section>
+			</section>
+
+
+			<section class="frame" id="frame7_bank_israel">
+				<h3>למשל, בין 40%-50% מהישראלים נמצאים במינוס כרוני.</h3>
+				<h1><span class="h_red">אבל לבנק ישראל</span><br>
+					<span class="h_red">אין מושג מי הם, </span><br>
+					<span class="h_red">ומה היכולת שלהם </span><br>
+					<span class="h_red">להמשיך לשלם את הריבית </span><br>
+					<span class="h_red">על המינוס</span><br>
+				</h1>
+				<h4 class="read_more_text">קרא עוד</h4>
+				<section class="read_more_arrow"></section>
+				<article id="frame7_read_more">
+	            	<section class="text_box">
+		            	<p>כנראה שבין 40%-50% מהציבור נמצאים כל הזמן במינוס שאנחנו לא יודעים מה עומקו, 
+						וכנראה שלפחות לשליש מהציבור שיש לו משכנתא יש גם הלוואה אחת נוספת לפחות
+						שאנחנו לא יודעים מה עומקה. אנחנו גם לא יודעים מי הישראלים שלוקחים את 
+						ההלוואות האלה, אנחנו לא באמת יודעים מה ההחזר הממוצע שלהם, ובוודאי שאין שום 
+						מעקב שוטף אחרי הנתונים האלה,בשביל לראות לאיזה כיוון המגמות הולכות. בקיצור, 
+						שטח מת אחד גדול.
+						</p>
+					</section>
+				</article>
+			</section>
+
+
+ 			<section class="frame" id="frame8_world">
+ 				<section class="text_box">
+	 				<h3>הנה סיפור שממחיש שגם אם נתוני המאקרו נראים בסדר גמור 
+	 				מלמעלה, ייתכן שמתפתחת לה בועת חובות רעילה מבפנים:
+	 				</h3>
+	 				<p>לפני המשבר העולמי, היחס בין חובות משקי הבית בדנמרק היה אחד הגבוהים 
+					בעולם - <span class="h_red h_red_small">267%. </span> בארה״ב לעומת זאת היחס היה  
+					<span class="h_red h_red_small">125% </span> ובכל זאת 
+					<span class="h_red h_red_small">רק 0.6% ממשקי הבית בדנמרק</span> 
+					לא הצליחו לעמוד בהחזר החובות שלהם מאז 2007 לעומת 12% בארה״ב.<br><br>
+					הסיבה? בדנמרק מי שנטלו את ההלוואות היו משפחות מהמעמדות הגבוהים ובארה״ב 
+					מי שנטלו יותר ויותר חובות הם דווקא העניים ומעמד הביניים. <br><br>
+					התוצאה: קריסת משכנתאות ומיתון ארוך שרק לאחרונה הצליחה 
+					 ארה״ב להתאושש ממנו חלקית.
+	 				</p>
+	 				<h2>בדיוק בגלל זה הרגולטורים, ובנק ישראל בראשם, חייב 
+					לדעת מה קורה בתוך הנתונים.
+	 				</h2>
+	 			</section>
+			</section>
+
+
+			<section class="frame" id="frame9_map">
+				<section id="frame9_text">
+					<h3>לכן, אחד הפרמטרים החשובים ביותר שהמדינה יכול לעקוב 
+					אחריהם הוא מה גובה ההחזר החודשי של האנשים שלקחו הלוואות 
+					ביחס לנטו שלהם
+					</h3>
+					<p>עמותת פעמונים מלווה בהתנדבות משפחות שהסתבכו בחובות במטרה לסייע להן
+					לפי הנתונים שלה, למשפחות ישראליות רבות ישנם חובות כבדים נוסף על המשכנתא שלהן
+					</p>
+					<p id="map_click"><span class="f_red">* </span>בלחיצה על אזור בארץ תוכלו לראות את מדד החובות שלו, 
+						בחלוקה עפ"י גובה המשכורת</p>
+				</section><br>
+
+				<section id="maps">
+					<button id="galilButton"> galil </button>
+					<button id="negevButton"> negev </button>
+					<button id="jerusalemButton"> jerusalem </button>
+					<button id="shomronButton"> shomron </button>
+					<button id="haifaButton"> haifa </button>
+					<button id="telavivButton"> telaviv </button>
+					<button id="natanyaButton"> natanya </button>
+					<br>
+					<section id="mapSide">
+						<img id="mapSwitcher" src="images/map_imgs/01.png" alt="" usemap="#Map" />
+							<map name="Map" id="Map">
+							    <area id="galil" alt="galil region" shape="poly" coords="160,0,148,9,143,5,139,13,138,25,122,33,117,28,98,28,92,54,128,56,134,57,137,62,138,67,142,71,144,83,150,77,157,76,168,66,178,46,175,34,174,30,172,24,174,19,168,7,169,2" />
+							    <area id="haifa" alt="haifa region" shape="poly" coords="142,85,124,76,105,81,103,86,107,102,106,111,101,118,75,97,74,93,79,68,80,60,83,56,95,56,131,58,138,71" />
+							    <area id="natanya" alt="natanya region" shape="poly" coords="73,99,63,132,101,134,104,124,103,120" />
+							    <area id="telaviv" alt="telaviv region" shape="poly" coords="63,134,104,136,102,147,91,153,86,158,81,163,76,171,73,177,69,185,46,175" />
+							    <area id="jerusalem" alt="jerusalem region" shape="poly" coords="104,148,113,152,117,156,117,166,115,169,118,177,118,184,110,187,109,194,100,200,94,208,90,222,85,224,80,224,72,217,66,217,62,217,58,211,61,202,65,191,75,174,84,161,94,152" />
+							    <area id="shomron" alt="shomron region" shape="poly" coords="142,171,145,180,139,182,135,184,133,190,130,197,127,207,127,214,125,228,125,234,121,242,121,248,125,255,125,263,129,269,128,275,124,274,114,272,107,268,99,265,96,262,92,250,91,245,91,238,89,235,88,224,94,218,95,210,97,206,100,202,110,194,111,187,120,181,119,175" />
+							    <area id="negev" alt="negev region" shape="poly" coords="45,177,66,186,56,211,59,218,64,220,71,220,77,224,86,227,92,257,94,265,99,268,106,271,117,275,123,277,121,280,121,284,118,296,114,306,111,313,108,314,102,335,105,346,101,351,102,375,98,377,97,382,93,387,94,395,87,412,84,429,80,435,76,440,70,438,66,411,61,400,41,344,33,334,33,324,31,319,28,307,0,234,9,223,14,217,17,213,20,211,24,208,27,206" />
+							</map>
+					</section>
+					<section id="map_graph"> </section>	
+				</section>
+			</section>
+
+
+			<section class="frame" id="frame10_loans">
+				<section>
+					<h3>מאז 2008, בגלל עליית מחירי הדירות, גם החובות של הישראלים 
+					לבנקים זינק וחלק מהעלייה היא בגלל גידול במשכנאות
+					אבל חלק אחר הוא בגלל שהישראלים התחילו לצרוך יותר על בסיס 
+					הלוואות ״לכל מטרה״ מבנקים ומחברות כרטיסי אשראי
+					</h3>
+				</section>	
+				<section id="loans_movie">  
+					<video loop id="video10"> 
+						<source src="movies/10-Loans_Movie.mp4" type="video/mp4" /> -->
+ 						<object data="flash_player.swf" type="application/x-shockwave-flash">
+							<param name="movie" value="flash_player.swf">
+						</object> 
+					</video>
+				</section>
+			</section>
+
+
+			<section class="frame" id="frame11_donut_chart">
+				<section>
+					<p>94% מהחובות של הישראלים הם לבנקים, שפועלים במשק לא תחרותי<br>
+					כלומר, אנחנו לוקחים יותר הלוואות וגם משלמים עליהן מחיר גבוה
+					</p>
+					<h3>מאילו גופים הישראלים לוקחים הלוואות?</h3>
+				</section>	
+				<div id="donut"></div>                <!--  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  -->
+			</section>
+
+
+			<section class="frame" id="frame12_lately">
+				<section>
+					<h3>לאחרונה בנק ישראל התחיל לאסוף נתונים. למשל, הוא התחיל 
+					לבקש מהבנקים נתונים על האנשים שלוקחים משכנתאות, בשביל 
+					לזהות מי האנשים האלה. זו הסנונית הראשונה ורק תחילתה של 
+					הדרך הארוכה שבנק ישראל צריך לעבור בשביל לגבש את התמונה 
+					הכוללת בשוק הזה.
+					</h3>
+					<h1>אז בנק ישראל אוסף נתונים אבל לאט מאוד, 
+					ובינתיים בועת החובות ממשיכה להתנפח. 
+					הישראלים לוקחים הלוואות רק בשביל שיוכלו 
+					לקחת משכנתא, הורים לוקחים הלוואות בשביל 
+					הילדים, וגם המינוס מעמיק.<br>
+					<span class="h_red">אם יהיה פה מיתון והאבטלה תעלה, </span>
+					<span class="h_red">  הבועה הזו עלולה להתפוצץ. </span>
+					<span class="h_red"> בינתיים היא ממשיכה להתנפח.</span>
+					</h1>	
+				</section>		
+			</section>
+
+
+			<section class="frame" id="frame13_counter_again">
+				<h1>בזמן שקראתם את הכתבה הזו, </h1><br><br>
+				<h1>הר החובות של הישראלים עלה ב - </h1>
+				<section class="h_red" id="counter_sub"></section>
+				<h1> והצטבר ל - </h1><br>
+				<section id="counter_again"></section>
+				<p>שקל</p>
+				<h2>שתפו!</h2>
+				<section id="facebook"></section>	
+				<section id="twitter"></section>
+			</section>
+
+			<section id="credit">
+				<section id="calcalist"></section>
+				<p>עיצוב: ליטל בר-נוי ואנה פוליוסוק,  תיכנות: קרן יעקב ומעוז תמיר<br>
+					תוכן: שאול אמסטרדמסקי ואלון רייס, הנחיה: מושון זר-אביב ויונית רושו </p>
+				<section id="shenkar"></section>
+			</section>
+
+        </div>
+
+	    <script>
+	        calculateCounter(); 
+	        waypointFunctions();   
+	        readMoreEventListener();
+	    </script>
+
+    </body>
+</html>
+
+
+

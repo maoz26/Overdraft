@@ -1,0 +1,13 @@
+@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	text-align:center;
+	font-family: 'PT Sans Narrow', sans-serif;
+	direction: rtl;
+}
+.clear{
+	clear:both;
+}
