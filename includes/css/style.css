@@ -59,20 +59,30 @@ article, section, main, nav, aside, footer, header, video {
 /**************************** General ******************************/
 
 body {
-  background-color: #101223;
+  background-color: #0f0f2a;
   text-align: center;
   z-index: -5; 
 }
 
 #wrapper {
-  margin: auto;
-  /*background: url(../../images/holeGif.gif) no-repeat;*/
-  /*background-size: cover;*/
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -4; /* before the background */
+    margin: auto;
+    background: url(../../images/bor04.png) repeat-y;
+    background-size: 100% ;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -4;
+    -webkit-animation: slide 60s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  from{
+      background-position:0px 9000px;
+  }
+  to{
+      background-position:0px 0px;
+  }
 }
 
 video {
